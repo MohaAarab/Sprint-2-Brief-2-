@@ -1,12 +1,81 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <script type="module" src="./src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E.C.E<</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="./dist/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-fond text-creme font-texte">
+
+  <!-- Header -->
+  <header class="bg-surface border-b border-bordure p-4">
+    <h1 class="font-titre text-2xl tracking-wide uppercase font-bold">E.C.E</h1>
+    <p class="text-xs text-secondaire mt-2"> Joueur sélectionné : Aurelius</p>
+  </header>
+
+  <!-- Main -->
+  <main class="p-4 pb-40 space-y-4">
+
+    <div>
+      <p class="text-[10px] uppercase text-empereur">Votre place dans l'arène</p>
+      <h2 class="font-titre text-2xl uppercase">Les profils</h2>
+      <p class="text-sm text-secondaire mt-1">Choisissez le joueur qui entre dans l'arène.</p>
+    </div>
+
+    <!-- Add button -->
+    <button id="profil-add" class=" w-full bg-empereur text-fond font-semibold py-3 rounded-lg">
+      + Ajouter un profil
+    </button>
+
+    <!-- Card 1 (selected) -->
+    <div class="bg-surface border border-empereur rounded-xl p-4">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-full border border-empereur flex items-center justify-center">🛡️</div>
+        <div class="flex-1">
+          <h3 class="font-semibold">Aurelius</h3>
+          <p class="text-xs text-secondaire">24 parties jouées</p>
+        </div>
+        <span class="text-empereur"></span>
+      </div>
+
+      <div class="flex justify-between text-xs mt-3">
+        <span class="text-secondaire">14 victoires au compteur</span>
+        <span class="text-empereur font-semibold">PROFIL SÉLECTIONNÉ</span>
+      </div>
+
+      <div class="grid grid-cols-3 gap-2 mt-3 text-sm">
+        <button class="py-2 rounded-md border border-empereur text-empereur bg-empereur/10">Choisi</button>
+        <button class="py-2 rounded-md bg-surface-elevee border border-bordure">Modifier</button>
+        <button class="py-2 rounded-md bg-surface-elevee border border-bordure text-esclave">Supprimer</button>
+      </div>
+    </div>
+
+    <!-- Ready box -->
+    <div class="bg-empereur/10 border border-empereur/30 rounded-xl p-4 flex gap-3 items-center">
+      <span>⚔️</span>
+      <div>
+        <p class="font-semibold text-sm">Aurelius est prêt à jouer</p>
+        <p class="text-xs text-secondaire">Votre prochaine partie sera liée à ce profil.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Bottom navigation -->
+  <nav class="fixed bottom-0 left-0 right-0 bg-surface border-t border-bordure grid grid-cols-3 text-xs p-2">
+    <a href="#" class="flex flex-col items-center py-2 rounded-lg bg-empereur/15 text-empereur">
+      <span>👤</span>Profils
+    </a>
+    <a href="#" class="flex flex-col items-center py-2 text-secondaire">
+      <span>⚔️</span>Jouer
+    </a>
+    <a href="#" class="flex flex-col items-center py-2 text-secondaire">
+      <span>🕘</span>Historique
+    </a>
+  </nav>
+
+</body>
 </html>
